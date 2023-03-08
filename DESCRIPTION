@@ -1,0 +1,24 @@
+Package: ccRCCcluster
+Title: Predict the ccRCC cluster
+Version: 1.0
+Authors@R: 
+    person("Yanlong", "Zhang", , "987062742@qq.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-8898-2189"))
+Description: Predict the cluster for ccRCC sample based on rna-seq/array data.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.2
+Imports: 
+    impute,
+    limma,
+    Matrix,
+    openxlsx,
+    partykit,
+    randomForest,
+    rpart,
+    sva,
+    xgboost
+Depends: 
+    R (>= 2.10)
+LazyData: true
