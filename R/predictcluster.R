@@ -119,11 +119,11 @@ predictcluster <- function(ccRCCdata){
   sigExp <- Matrix(sigExp,sparse=T)
   dtrain2 <- xgb.DMatrix(data = sigExp, label = group)
 
-  xgbpre <- xgboost( data = dtrain2,max_depth=5  #树的深度自己
+  xgbpre <- xgboost( data = dtrain2,max_depth=4  #树的深度自己
                      , eta=0.5 #调节每棵树的权重，越小则约避免overfit
                      ,booster="gbtree" #gblinear#二分类，线性回
                      , objective='multi:softmax', num_class=3 #二分类，线性回 需要修
-                     ,nround=1000)
+                     ,nround=400)
 
 
 
